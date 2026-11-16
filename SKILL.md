@@ -7,7 +7,7 @@ description: Analyze websites for answer engine optimization (AEO), generative e
 
 Produce an evidence-backed diagnosis and concrete recommendations that improve retrieval, comprehension, citation usefulness, and qualified conversions. Separate readiness from actual visibility. Never promise recommendations or citations from an engine.
 
-Read `references/audit-framework.md` for checks, scoring, prioritization, and output structure. Read `references/evidence-and-claims.md` before interpreting ranking claims or proposing crawler rules. Read `references/evaluation-cases.md` for validation scenarios when changing this skill.
+Read `references/accessibility-standards.md` before accessibility checks or code recommendations. Read `references/audit-framework.md` for checks, scoring, prioritization, and output structure. Read `references/evidence-and-claims.md` before interpreting ranking claims or proposing crawler rules. Read `references/evaluation-cases.md` for validation scenarios when changing this skill.
 
 ## 1. Establish scope and intent
 
@@ -33,7 +33,7 @@ Never infer raw HTML from a search excerpt or browser text extraction. Never inf
 
 Audit access/index eligibility, content availability, semantic/accessibility usability, answer quality, evidence/entity clarity, and maintenance. Check robots per relevant agent and URL path; a homepage allowance does not prove the entire site is crawlable. Inspect WAF/CDN blocks separately. Distinguish crawl permission, indexing permission, snippet permission, training permission, and user-triggered retrieval.
 
-Prefer initial-HTML availability for critical facts while testing actual rendering behavior. Find whether price, specifications, exclusions, proof, and comparisons survive extraction. Use native semantic HTML and accurate accessible names; avoid indiscriminate ARIA or keyword-stuffed alt text.
+Prefer initial-HTML availability for critical facts while testing actual rendering behavior. Find whether price, specifications, exclusions, proof, and comparisons survive extraction. Use native semantic HTML and accurate accessible names; avoid indiscriminate ARIA or keyword-stuffed alt text. Use WCAG 2.2 Level A/AA as the default accessibility review target, verify current W3C status, and distinguish normative success criteria from informative WAI techniques and APG examples. Map each accessibility finding to an applicable criterion, level, source URL, observed evidence, test method, and acceptance test. Mark criteria that cannot be evaluated as untested; never claim sitewide conformance from this bounded audit.
 
 Evaluate whether an unfamiliar reader can identify what the product is, whom it serves, what it does, constraints, price basis, and why claims are credible. Recommend concise direct answers and conditional comparisons only when they serve the question. Do not require every page to be an FAQ or force a heading formula.
 
@@ -44,6 +44,8 @@ Validate important changing facts against their authoritative source. Attach an 
 Apply the reference rubric. Keep confidence separate from severity. Produce exact URLs, evidence, business consequence, recommended changes, owner, effort, and acceptance tests. Consolidate template defects without hiding which sampled pages were checked. Lead with critical access blockers and high-value answer gaps. Tie recommendations to relevant customer questions.
 
 For the top three opportunities, provide concrete before/after copy, HTML, or implementation instructions using verified facts. Identify draft placeholders. Include a definition, question/answer block, conditional comparison, or proof treatment as relevant. Recommend schema only when an applicable type accurately represents visible content; never promise AI inclusion from schema, FAQ markup, or llms.txt.
+
+Before drafting component changes, inspect the existing framework, handlers, styling hooks, state ownership, and interaction pattern where available. Derive accessibility state from the same state that controls the UI; preserve existing functionality and avoid duplicate handlers. If only a screenshot or snippet is available, label code illustrative and state integration assumptions. Do not equate missing optional ARIA with a WCAG failure or invent a search-ranking benefit.
 
 Default to read-only analysis and reviewable proposals. Implement when asked, within the authorized scope; validate changes against their acceptance tests. Do not independently publish website changes, buy tools, submit forms, or contact third parties for an audit.
 
