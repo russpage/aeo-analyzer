@@ -11,6 +11,8 @@
 | Evidence and entity clarity | Organization/product identities, authorship where relevant, contact/about, original research, methodology, named sources, dated proof, consistency across owned and independent sources | Claims trace to a source, scope, and verification date; attributed testimonial remains readable text; distinguish self-reported from independently corroborated facts |
 | Maintenance and discovery | Verified price/feature/review dates, real publication/update dates, content ownership, broken key links, stale redirects, schema-visible content consistency | Changes trigger review; broken links confirmed with GET where HEAD is ambiguous; sitemap lastmod reflects substantive changes; no invented freshness |
 
+For accessibility, apply `accessibility-standards.md`: include criterion/level/source, tested state, surface and method in findings. Distinguish normative failures from optional pattern improvements; publish coverage and untested criteria, not a blanket WCAG conformance claim.
+
 Inspect structured data syntax, eligible type, required properties, entity IDs, and parity with visible content. Do not mark markup valid or rich-result eligible without an appropriate validator. Do not recommend FAQ schema as a universal visibility tactic. Do not treat structured-data scripts as missing visible prose: assess both separately.
 
 For local/service businesses, check service geography, eligibility, contact details, business profile consistency, and real service evidence. For commerce, check variants, availability, shipping, returns, identifiers, and price context. For B2B, check deployment, integrations, security evidence, implementation, procurement, and pricing basis. Use only relevant checks.
