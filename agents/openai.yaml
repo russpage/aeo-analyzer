@@ -1,0 +1,14 @@
+interface:
+  display_name: AEO analyzer
+  short_description: Audit AI discoverability and prioritize evidence-backed fixes
+  default_prompt: Use $aeo-analyzer to audit this website and recommend specific,
+    evidence-backed improvements for AI search and answer engines.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
